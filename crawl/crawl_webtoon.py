@@ -156,7 +156,7 @@ class crawl_naver_webtoon:
 
             for idx, image in enumerate(image_lists):
                 image_file_url = image.attrs.get('src', '')
-                image_dir_path = os.path.join(dbconn.BASE_PATH, self._webtoon_title, (str)(episode_no))
+                image_dir_path = os.path.join(dbconn.BASE_PATH, 'webtoon',  self._webtoon_title, (str)(episode_no))
                 image_save_path = os.path.join(image_dir_path, str(idx + 1) + '.jpg')
 
                 if not os.path.exists(image_dir_path):
